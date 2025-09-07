@@ -28,5 +28,8 @@ def remove_background_image(image):
     """
     Removes the background from a PIL Image object and returns the result.
     """
+    print(image)
+    image = Image.open(image).convert("RGBA")
     output_image = remove(image)
+    output_image.save("docs/output.png")
     return output_image
