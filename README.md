@@ -1,6 +1,6 @@
 # PyImagEditor
 
-This is my app to remove background of the images on my files or paste, also you can copy the output image.
+This is my app to remove background of the images on my files or images from clipboard, also you can copy the output image.
 
 I will update the app to add more functions and make the interface.
 
@@ -8,7 +8,7 @@ For now, the app works only for console.
 
 ## architecture
 
-I was used the MVC architecture
+I use the MVC architecture
 
 ```bash
 PyImagEditor/
