@@ -14,7 +14,7 @@ def console_start():
     start()
 
     while option:
-        interface_option()
+        interface_options_list()
         try:
 
             selection = int(input("Enter your choice: "))

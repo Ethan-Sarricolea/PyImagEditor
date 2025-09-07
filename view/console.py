@@ -43,11 +43,14 @@ def interface_dev(dev_message):
     """
     return(f"[DEV]: {dev_message}")
 
-def interface_option():
+def interface_option(options):
+    return (f"[OPTION]: {options}")
+
+def interface_options_list():
     print("Select an option:")
-    print(f"1. {interface_dev('Copy Image to Clipboard')}")
-    print("2. Remove Background from Image File")
-    print("3. Remove Background from Clipboard Image")
+    print(f"1. {interface_option('Copy Image to Clipboard')}")
+    print(f"2. {interface_option('Remove Background from Image File')}")
+    print(f"3. {interface_option('Remove Background from Clipboard Image')}")
     print("4. Exit")
 
 def confirmation_prompt(prompt_message):

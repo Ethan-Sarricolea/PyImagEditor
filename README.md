@@ -1,46 +1,54 @@
 # PyImagEditor
-Una app con funciones basicas de edición de imagenes
 
-## Arquitectura
+This is my app to remove background of the images on my files or paste, also you can copy the output image.
 
-Se utiliza la arquitectura MVC
+I will update the app to add more functions and make the interface.
+
+For now, the app works only for console.
+
+## architecture
+
+I was used the MVC architecture
 
 ```bash
 PyImagEditor/
 │
-├── models/            # Lógica de negocio y datos
+├── model/            # Logic
 │   ├── __init__.py
-│   └── imagen.py      # Ej: funciones para procesar imagenes
+│   └── background_rm.py   # remove background functions
+│   └── image_ctrl.py      # copy, paste on clipboard functions
 │
-├── views/             # Presentación (UI, consola, web, etc.)
+├── view/             # UI (console, web, desktop)
 │   ├── __init__.py
-│   └── consola.py     # Ej: imprimir resultados, mostrar mensajes
+│   └── console.py     # console messages
 │
-├── controllers/       # Controladores (conectan vista y modelo)
+├── controller/       # Controller (view and controller connection)
 │   ├── __init__.py
-│   └── imagen_ctrl.py # Ej: coordina pegar imagen y quitar fondo
+│   └── console_ctrl.py # Console options
 │
-├── utils/             # (Opcional) funciones auxiliares/reutilizables
-│   └── helpers.py
+├── utils/             # auxiliary functions
+│   └── helpers.py     # optional
 │
-├── main.py            # Punto de entrada de la app
-└── requirements.txt   # Dependencias (ej. rembg, pillow)
+├── main.py            # App execution
+└── requirements.txt   # Dependencies
 ```
 
-## Requerimientos
+## Requirements
 
 `pip install -r requirements.txt`
 
-## Operaciones
+## Operations
 
 Modelo
-- Eliminar fondo
+- remove background
+- Copy background
+- Paste image
+- Save image
 
 Controlador
-- Copiar imagen
-- Pegar imagen
-- Guardar imagen
+- I/O
 
 Vista
-- Mensajes en consola
-- Pantallas (posterior)
+- Interface messages
+- Desktop (posterior)
+
